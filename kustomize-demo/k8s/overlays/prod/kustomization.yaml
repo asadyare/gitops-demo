@@ -1,0 +1,17 @@
+resources:
+  - ../../base
+
+namespace: prod
+
+namePrefix: prod-
+
+replicas:
+  - name: nginx
+    count: 3
+
+images:
+  - name: nginx
+    newTag: "1.25"
+
+patchesStrategicMerge:
+  - ingress-patch.yaml

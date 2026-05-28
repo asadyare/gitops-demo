@@ -1,0 +1,17 @@
+resources:
+  - ../../base
+
+namespace: staging
+
+namePrefix: staging-
+
+replicas:
+  - name: nginx
+    count: 2
+
+images:
+  - name: nginx
+    newTag: "1.25"
+
+patchesStrategicMerge:
+  - ingress-patch.yaml

@@ -1,0 +1,14 @@
+resources:
+  - ../../base
+
+namespace: dev
+
+namePrefix: dev-
+
+replicas:
+  - name: nginx
+    count: 1
+
+images:
+  - name: nginx
+    newTag: "1.25"
